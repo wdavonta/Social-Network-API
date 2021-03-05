@@ -1,0 +1,25 @@
+{
+  "name": "social-network-api",
+  "version": "1.0.0",
+  "description": "Homework week 18",
+  "main": "server.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mongoose": "^5.11.18"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wdavonta/Social-Network-API.git"
+  },
+  "author": "Da'Vonta Williamson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wdavonta/Social-Network-API/issues"
+  },
+  "homepage": "https://github.com/wdavonta/Social-Network-API#readme"
+}
