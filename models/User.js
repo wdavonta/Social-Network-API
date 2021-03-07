@@ -7,7 +7,8 @@ const UserSchema = new Schema (
         username: {
             type: String,
             unique: true,
-            required: 'Username is Required'
+            required: 'Username is Required',
+            trim: true
 
         },
         email: {
@@ -30,7 +31,7 @@ const UserSchema = new Schema (
             ref: 'User'
     
             }
-        ],
+        ]
     },
     {
         toJSON: {

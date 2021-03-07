@@ -77,7 +77,7 @@ updateUser({ params, body }, res) {
     addFriend({ params }, res) {
         User.findOneAndUpdate(
             { _id: params.userId },
-            { $addToSet: { friends: { friendId: friendId } } },
+            { $addToSet: { friends: friendId } },
             { new: true, runValidators: true}
         )
 
