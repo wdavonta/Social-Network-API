@@ -1,5 +1,5 @@
 const { Schema, model, Types } = require('mongoose');
-const Thought = require('./Thought.js');
+// const Thought = require('./Thought.js');
 
 
 const UserSchema = new Schema (
@@ -19,14 +19,14 @@ const UserSchema = new Schema (
         },
         thoughts: [
             {
-            type: mongoose.Schema.Types.ObjectId,
+            type: Schema.Types.ObjectId,
             ref: 'Thought'
 
             }
         ],
         friends: [
             {
-            type: mongoose.Schema.Types.ObjectId,
+            type: Schema.Types.ObjectId,
             ref: 'user'
     
             }
@@ -42,7 +42,7 @@ const UserSchema = new Schema (
 
 );
 
-CommentSchema.virtual('friendCount').get(function() {
+UserSchema.virtual('friendCount').get(function() {
     return this.friends.length;
   });
 
