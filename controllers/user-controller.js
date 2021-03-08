@@ -77,15 +77,15 @@ updateUser({ params, body }, res) {
     addFriend({ params }, res) {
         User.findOneAndUpdate(
             { _id: params.userId },
-            { $addToSet: { friends: friendId } },
-            { new: true, runValidators: true}
+            { $push: { friends: friendId } },
+            { new: true}
         )
 
         .then(dbUserData => {
             if (!dbUserData) {
               res.status(404).json({ message: 'No user found with this id!' });
               return;
-            };
+            }
             return res.json(dbUserData);
         })
         .catch(err => res.json(err));

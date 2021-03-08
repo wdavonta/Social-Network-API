@@ -14,14 +14,12 @@ const {
 router
   .route('/')
   .get(getAllThoughts)
-
-  router.route('/:userId')
   .post(createThought);
 
 
 // Set up GET one, PUT, and DELETE at /api/thoughts/:id
 router
-.route('/:thoughtId')
+.route('/:Id')
 .get(getThoughtById)
 .put(updateThought)
 .delete(deleteThought);
@@ -31,8 +29,11 @@ router
 // Set up POST, DELETE at /api/thoughts/:thoughtId/reactions
 router
 .route('/:thoughtId/reactions')
-.post(addReaction)
-.delete(deleteReaction)
+.post(addReaction);
+
+router
+.route('/:thoughtId/reactions/:reactionId')
+.delete(deleteReaction);
 
 
 module.exports = router;
