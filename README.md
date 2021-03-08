@@ -14,8 +14,6 @@ You will need to clone the repo to your computer. Then run the npm i install to 
 # Demo
 [Link] ( <iframe src=https://drive.google.com/file/d/1AEHeUlIgnIrwPMhsGf3DG8PRatp3c_lp/view width="640" height="480"></iframe>)
 
-
-
 # Questions
 
 
